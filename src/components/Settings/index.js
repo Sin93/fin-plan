@@ -1,22 +1,13 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
-import IncomeSources from "../IncomeSources";
-import ExpenseSources from "../ExpenseSources";
-import {Col, Row} from 'react-bootstrap';
 
 
 const Settings = ({
   years,
-  setYears,
-  incomeSources,
-  setIncomeSources,
-  expenseSources,
-  setExpenseSources,
-  savingsMethods,
-  setSavingsMethods,
+  setYears
 }) => {
   return (
-    <Form>
+    <Form className="formYears">
       <Form.Group controlId="formYears">
         <Form.Label>Количество лет (не больше 30)</Form.Label>
         <Form.Control
@@ -27,14 +18,6 @@ const Settings = ({
           onChange={(event) => setYears(event.target.value)}
         />
       </Form.Group>
-      <Row>
-        <Col>
-          <IncomeSources incomeSources={incomeSources} setIncomeSources={setIncomeSources}/>
-        </Col>
-        <Col>
-          <ExpenseSources expenseSources={expenseSources} setExpenseSources={setExpenseSources}/>
-        </Col>
-      </Row>
     </Form>
   );
 };
