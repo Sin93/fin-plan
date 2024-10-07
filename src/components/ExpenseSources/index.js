@@ -7,7 +7,6 @@ import {InputExpenseForm} from "../InputExpenseForm";
 
 const ExpenseSources = ({ expenseSources, setExpenseSources }) => {
   const [showExpenseForm, setShowExpenseForm] = useState(false)
-  console.log(expenseSources)
 
   const handleShowExpenseForm = () => {
     setShowExpenseForm(true)
